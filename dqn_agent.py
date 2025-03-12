@@ -59,7 +59,7 @@ if __name__ == '__main__':
     for e in range(episodes):
         state, _ = env.reset(seed=42)  # Perbaikan reset environment
         state = np.reshape(state, [1, state_size])
-        for time in range(500):
+        for time in range(100):
             action = agent.act(state)
             next_state, reward, terminated, truncated, _ = env.step(action)  # Perbaikan unpacking
             done = terminated or truncated  # Gabungkan kondisi selesai

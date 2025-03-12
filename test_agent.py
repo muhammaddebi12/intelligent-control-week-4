@@ -22,7 +22,7 @@ for e in range(5):
     state, _ = env.reset(seed=42)
     state = np.array(state, dtype=np.float32).reshape(1, state_size)
     
-    for time in range(500):
+    for time in range(100):
         env.render()
         action = agent.act(state)  # Ambil aksi berdasarkan model
         next_state, reward, terminated, truncated, _ = env.step(action)  
