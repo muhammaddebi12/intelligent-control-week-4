@@ -18,7 +18,7 @@ except FileNotFoundError:
     print("No trained model found! Running agent with random weights.")
 
 # Jalankan 5 episode pengujian
-for e in range(5):
+for e in range(1000):
     state, _ = env.reset(seed=42)
     state = np.array(state, dtype=np.float32).reshape(1, state_size)
     
